@@ -1,0 +1,22 @@
+{
+    "bindings": [
+      {
+        "name": "req",
+        "type": "httpTrigger",
+        "direction": "in",
+        "methods": [
+          "post"
+        ],
+        "authLevel": "function"
+      },
+      {
+        "type": "serviceBus",
+        "connection": "SB_CONNECTION",
+        "name": "outputSbMsg",
+        "queueName": "messages",
+        "accessRights": "Send",
+        "direction": "out"
+      }
+    ],
+    "disabled": false
+  }
